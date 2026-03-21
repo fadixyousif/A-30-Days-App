@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">A30DaysApp</string>
+    <string name="app_name">30 Days of Placeholder</string>
+    <string name="day">Day %1$d</string>
+
+    <string name="day1_title">Placeholder Day 1</string>
+    <string name="day1_desc">This is a placeholder description for Day 1.</string>
+    <string name="day2_title">Placeholder Day 2</string>
+    <string name="day2_desc">This is a placeholder description for Day 2.</string>
 </resources>
