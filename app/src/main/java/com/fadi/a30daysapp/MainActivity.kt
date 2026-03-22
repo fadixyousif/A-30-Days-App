@@ -202,7 +202,6 @@ fun DayItem(
                 contentDescription = null,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .aspectRatio(16f / 9f)
                     .clip(MaterialTheme.shapes.medium),
                 contentScale = ContentScale.Crop
             )

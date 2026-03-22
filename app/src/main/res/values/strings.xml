@@ -1,9 +1,125 @@
 <resources>
-    <string name="app_name">30 Days of Placeholder</string>
+    <string name="app_name">30 Days of Coding</string>
     <string name="day">Day %1$d</string>
 
-    <string name="day1_title">Placeholder Day 1</string>
-    <string name="day1_desc">This is a placeholder description for Day 1.</string>
-    <string name="day2_title">Placeholder Day 2</string>
-    <string name="day2_desc">This is a placeholder description for Day 2.</string>
+    <!-- Day 1 -->
+    <string name="day1_title">Setup Your Environment</string>
+    <string name="day1_desc">Install Android Studio and create your first project. Make sure everything runs correctly.</string>
+
+    <!-- Day 2 -->
+    <string name="day2_title">Hello World in Kotlin</string>
+    <string name="day2_desc">Learn basic Kotlin syntax and display your first text using Compose.</string>
+
+    <!-- Day 3 -->
+    <string name="day3_title">Variables &amp; Data Types</string>
+    <string name="day3_desc">Understand how to store and use different types of data in Kotlin.</string>
+
+    <!-- Day 4 -->
+    <string name="day4_title">Conditional Logic</string>
+    <string name="day4_desc">Use if/else statements to control your app’s behavior.</string>
+
+    <!-- Day 5 -->
+    <string name="day5_title">Loops</string>
+    <string name="day5_desc">Repeat actions using for and while loops.</string>
+
+    <!-- Day 6 -->
+    <string name="day6_title">Functions</string>
+    <string name="day6_desc">Write reusable code blocks to organize your app better.</string>
+
+    <!-- Day 7 -->
+    <string name="day7_title">Lists &amp; Collections</string>
+    <string name="day7_desc">Store and manage multiple pieces of data efficiently.</string>
+
+    <!-- Day 8 -->
+    <string name="day8_title">First Composable</string>
+    <string name="day8_desc">Create your first UI using composable functions.</string>
+
+    <!-- Day 9 -->
+    <string name="day9_title">Layouts (Column &amp; Row)</string>
+    <string name="day9_desc">Arrange UI elements vertically and horizontally.</string>
+
+    <!-- Day 10 -->
+    <string name="day10_title">Modifiers</string>
+    <string name="day10_desc">Customize UI elements with padding, size, and colors.</string>
+
+    <!-- Day 11 -->
+    <string name="day11_title">Text &amp; Styling</string>
+    <string name="day11_desc">Style text using fonts, sizes, and colors.</string>
+
+    <!-- Day 12 -->
+    <string name="day12_title">Buttons &amp; Clicks</string>
+    <string name="day12_desc">Add buttons and handle user interactions.</string>
+
+    <!-- Day 13 -->
+    <string name="day13_title">State in Compose</string>
+    <string name="day13_desc">Use state to make your UI dynamic and responsive.</string>
+
+    <!-- Day 14 -->
+    <string name="day14_title">Mini UI Project</string>
+    <string name="day14_desc">Combine your knowledge to build a simple screen.</string>
+
+    <!-- Day 15 -->
+    <string name="day15_title">LazyColumn Lists</string>
+    <string name="day15_desc">Display scrollable lists efficiently.</string>
+
+    <!-- Day 16 -->
+    <string name="day16_title">Cards &amp; UI Design</string>
+    <string name="day16_desc">Organize content using cards and clean layouts.</string>
+
+    <!-- Day 17 -->
+    <string name="day17_title">Images &amp; Resources</string>
+    <string name="day17_desc">Add images and manage app resources.</string>
+
+    <!-- Day 18 -->
+    <string name="day18_title">Navigation Basics</string>
+    <string name="day18_desc">Move between different screens in your app.</string>
+
+    <!-- Day 19 -->
+    <string name="day19_title">Text Input</string>
+    <string name="day19_desc">Accept user input using TextField.</string>
+
+    <!-- Day 20 -->
+    <string name="day20_title">Simple Logic</string>
+    <string name="day20_desc">Add basic logic like counters and toggles.</string>
+
+    <!-- Day 21 -->
+    <string name="day21_title">Mini Project</string>
+    <string name="day21_desc">Build a small app like a to-do list.</string>
+
+    <!-- Day 22 -->
+    <string name="day22_title">ViewModel Basics</string>
+    <string name="day22_desc">Separate UI and data logic using ViewModel.</string>
+
+    <!-- Day 23 -->
+    <string name="day23_title">App Architecture</string>
+    <string name="day23_desc">Learn how to structure your app properly.</string>
+
+    <!-- Day 24 -->
+    <string name="day24_title">APIs</string>
+    <string name="day24_desc">Fetch data from the internet.</string>
+
+    <!-- Day 25 -->
+    <string name="day25_title">JSON Data</string>
+    <string name="day25_desc">Work with JSON data from APIs.</string>
+
+    <!-- Day 26 -->
+    <string name="day26_title">Error Handling</string>
+    <string name="day26_desc">Handle errors and loading states gracefully.</string>
+
+    <!-- Day 27 -->
+    <string name="day27_title">UI Polish</string>
+    <string name="day27_desc">Improve spacing, colors, and design.</string>
+
+    <!-- Day 28 -->
+    <string name="day28_title">Plan Your App</string>
+    <string name="day28_desc">Design your final project and features.</string>
+
+    <!-- Day 29 -->
+    <string name="day29_title">Build Your App</string>
+    <string name="day29_desc">Start building your final project.</string>
+
+    <!-- Day 30 -->
+    <string name="day30_title">Finish &amp; Improve</string>
+    <string name="day30_desc">Fix bugs and polish your app for release.</string>
+
 </resources>
