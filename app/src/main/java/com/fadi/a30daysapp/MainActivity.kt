@@ -56,16 +56,19 @@ import com.fadi.a30daysapp.data.DaysData
 import com.fadi.a30daysapp.model.Day
 import com.fadi.a30daysapp.ui.theme.A30DaysAppTheme
 
+// MainActivity class
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             A30DaysAppTheme {
+                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxWidth(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    // Calling the DaysApp composable function
                     DaysApp()
                 }
             }
@@ -73,16 +76,20 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+// DaysApp composable function
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DaysApp() {
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
+    // Scaffold with top bar and content
     Scaffold(
         modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
+            // Top app bar with title and scroll behavior
             DaysTopAppBar(scrollBehavior = scrollBehavior)
         }
     ) { innerPadding ->
+        // Content of the app
         DaysList(
             days = DaysData.days,
             contentPadding = innerPadding
@@ -90,9 +97,11 @@ fun DaysApp() {
     }
 }
 
+// DaysTopAppBar composable function
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DaysTopAppBar(scrollBehavior: TopAppBarScrollBehavior, modifier: Modifier = Modifier) {
+    // Center aligned top app bar with title and colors
     CenterAlignedTopAppBar(
         scrollBehavior = scrollBehavior,
         title = {
@@ -110,17 +119,21 @@ fun DaysTopAppBar(scrollBehavior: TopAppBarScrollBehavior, modifier: Modifier = 
     )
 }
 
+// DaysList composable function
 @Composable
 fun DaysList(
     days: List<Day>,
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(0.dp)
 ) {
+    // Lazy column for the list of days
     LazyColumn(
         contentPadding = contentPadding,
         modifier = modifier.padding(horizontal = 16.dp)
     ) {
+        // items for each day
         items(days) { day ->
+            // Day item composable function
             DayItem(
                 day = day,
                 modifier = Modifier.padding(vertical = 10.dp)
@@ -129,26 +142,31 @@ fun DaysList(
     }
 }
 
+// DayItem composable function
 @Composable
 fun DayItem(
     day: Day,
     modifier: Modifier = Modifier
 ) {
+    // Remember for expanded state
     var expanded by remember { mutableStateOf(false) }
-    
+
+    // Card for the day item
     Card(
+        // elevation, shape, and colors
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         shape = MaterialTheme.shapes.large,
         colors = CardDefaults.cardColors(
-            // Use ContainerHigh to make the card "pop" against the background in dark mode
             containerColor = MaterialTheme.colorScheme.surfaceContainerHigh
         ),
         modifier = modifier
             .fillMaxWidth()
             .clickable { expanded = !expanded }
     ) {
+        // Column for the content
         Column(
             modifier = Modifier
+                // animate content size
                 .animateContentSize(
                     animationSpec = spring(
                         dampingRatio = Spring.DampingRatioLowBouncy,
@@ -157,17 +175,19 @@ fun DayItem(
                 )
                 .padding(16.dp)
         ) {
+            // Row for the day badge and title
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Day Badge
+                // Badge for the day
                 Box(
                     modifier = Modifier
                         .clip(MaterialTheme.shapes.small)
                         .background(MaterialTheme.colorScheme.primaryContainer)
                         .padding(horizontal = 10.dp, vertical = 4.dp)
                 ) {
+                    // text for the day badge
                     Text(
                         text = stringResource(R.string.day, day.dayNumber),
                         style = MaterialTheme.typography.labelLarge,
@@ -175,7 +195,9 @@ fun DayItem(
                         fontWeight = FontWeight.Bold
                     )
                 }
+                // Spacer to push the icon to the right
                 Spacer(modifier = Modifier.weight(1f))
+                // Icon for expanding/collapsing the content with onClick function
                 IconButton(onClick = { expanded = !expanded }) {
                     Icon(
                         imageVector = if (expanded) Icons.Filled.KeyboardArrowUp else Icons.Filled.KeyboardArrowDown,
@@ -185,18 +207,22 @@ fun DayItem(
                     )
                 }
             }
-            
+
+            // Spacer for vertical space
             Spacer(modifier = Modifier.height(12.dp))
-            
+
+            // Text for the title
             Text(
                 text = stringResource(day.titleRes),
                 style = MaterialTheme.typography.headlineSmall,
                 color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.Bold
             )
-            
+
+            // Spacer for vertical space
             Spacer(modifier = Modifier.height(12.dp))
-            
+
+            // Image for the day that is being generated.
             Image(
                 painter = painterResource(day.imageRes),
                 contentDescription = null,
@@ -205,7 +231,8 @@ fun DayItem(
                     .clip(MaterialTheme.shapes.medium),
                 contentScale = ContentScale.Crop
             )
-            
+
+            // if check for expanded is true, the content will be displayed.
             if (expanded) {
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
@@ -219,20 +246,11 @@ fun DayItem(
     }
 }
 
+// preview for the app
 @Preview(showBackground = true)
 @Composable
 fun DaysAppPreview() {
     A30DaysAppTheme(darkTheme = false) {
-        Surface(color = MaterialTheme.colorScheme.background) {
-            DaysApp()
-        }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DaysAppDarkPreview() {
-    A30DaysAppTheme(darkTheme = true) {
         Surface(color = MaterialTheme.colorScheme.background) {
             DaysApp()
         }

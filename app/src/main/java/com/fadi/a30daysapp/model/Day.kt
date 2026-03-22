@@ -3,6 +3,7 @@ package com.fadi.a30daysapp.model
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 
+// Day data class represents a day in the app
 data class Day(
     val dayNumber: Int,
     @StringRes val titleRes: Int,

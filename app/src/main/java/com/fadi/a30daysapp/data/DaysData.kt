@@ -3,6 +3,7 @@ package com.fadi.a30daysapp.data
 import com.fadi.a30daysapp.R
 import com.fadi.a30daysapp.model.Day
 
+// DaysData object contains a list of days
 object DaysData {
     val days = listOf(
         Day(dayNumber = 1, titleRes = R.string.day1_title, descriptionRes = R.string.day1_desc, imageRes = R.drawable.day1_image),
